@@ -7,6 +7,6 @@
 - Creați un fork al repozitoriului [Homework-Symfony-Git](https://github.com/P5CHI-Web-Academy/Homework-Symfony-Git)
 - Clonați repozitoriul nou pe local
 - Creati un dosar cu numele vostru
-- Realizati tema pentru acasa
+- Creati un fisier Readme.md cu careva detalii despre voi
 - Push la modificări
 - Creați un pull request la repozitoriul original
