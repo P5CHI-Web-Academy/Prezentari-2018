@@ -1,0 +1,1 @@
+/// <reference path="uuid/index.d.ts" />
