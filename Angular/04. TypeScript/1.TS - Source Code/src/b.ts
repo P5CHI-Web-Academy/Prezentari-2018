@@ -1,0 +1,1 @@
+export const B = (b: any) => console.log(b);

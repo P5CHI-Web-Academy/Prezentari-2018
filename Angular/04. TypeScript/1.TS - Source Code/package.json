@@ -1,0 +1,17 @@
+{
+  "name": "presentation1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint":"npx tslint --force --project ./tsconfig.json",
+    "lintfix":"npx tslint --force --fix --project  ./tsconfig.json"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tslint": "5.9.1",
+    "typescript": "2.8.1"
+  }
+}
