@@ -1,53 +1,87 @@
-class Person {
-    name: string;
+//We can pass any type and returns any type
+
+function identity(arg: any): any {
+    return arg;
 }
 
-class Employee extends Person {
-    department: number;
+// We pass and get only one type
+
+function identity<T>(arg: T): T {
+    return arg;
 }
 
-class Animal {
-    breed: string;
+const value = identity<number>(115);
+
+
+// Error: cannot recognize length
+function getLength<T>(arg: T): number {
+    return arg.length;
 }
 
-let workers: Array<Person> = [];
+interface Lengthwise {
+    length: number;
+}
 
-workers[0] = new Person();
-workers[1] = new Employee();
+// Generic constrains
+function getLength<T extends Lengthwise>(arg: T): number {
+    return arg.length;
+}
 
-// workers[2] = new Animal();  // compile-time error
+function getLength<T>(arg: Array<T>): number {
+    return arg.length;
+}
+
+// IF we need only length, then we can use ArrayLike
+function getLength<T>(arg: ArrayLike<T>): number {
+    return arg.length;
+}
 
 
-class Map<T> {
-    private map: { [key: string]: T } = {};
+// Type assertions are a way to tell the compiler “trust me, I know what I’m doing.”
+const vrar: any = 'test';
+let someString: string = (<string>vrar).toUpperCase();
+someString = (vrar as string).toUpperCase();
 
-    setItem(key: string, item: T) {
+console.log(someString);
 
-        this.map[key] = item;
-    }
 
-    getItem(key: string) {
-        return this.map[key];
-    }
-
-    clear() {
-        this.map = {};
-    }
-
-    printMap() {
-        for (let key in this.map) {
-            console.log(key);
-        }
+// define a generic type argument and instantiate this type at runtime:
+class Factory {
+    create<T>(type: (new () => T)): T {
+        return new type();
     }
 }
 
-const numberMap = new Map<number>();
-numberMap.setItem("Mobile", 2);
-numberMap.setItem("products", 10);
-console.log(numberMap.getItem("Mobile"));
-numberMap.printMap();
-numberMap.clear();
+let factory = new Factory();
+let person = factory.create(Person);
 
-const stringMap = new Map<string>();
-stringMap.setItem("Node Js ", "Javscript framework");
-stringMap.printMap();
+
+// Generic classes
+
+class ItemCollection<T> {
+    private itemArray: Array<T>;
+
+    constructor() {
+        this.itemArray = [];
+    }
+
+    Add(item: T) {
+        this.itemArray.push(item);
+    }
+
+    GetFirst(): T {
+        return this.itemArray[0];
+    }
+}
+
+let collection = new ItemCollection<string>();
+
+collection.Add('some');
+collection.Add('string');
+collection.GetFirst();
+
+let numCollection = new ItemCollection<number>();
+
+numCollection.Add(1);
+numCollection.Add(2);
+numCollection.GetFirst();

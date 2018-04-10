@@ -28,6 +28,9 @@ const o = {
     }
 };
 
+d = Object.getOwnPropertyNames(o);
+console.log(d);
+
 d = Object.getOwnPropertyDescriptor(o, 'foo');
 console.log(d);
 d = Object.getOwnPropertyDescriptor(o, 'bar');
@@ -64,6 +67,3 @@ const meetup = new JSMeetup();
 
 console.log(meetup.welcome("World", "Hello"));
 
-
-
-// More here :  https://cabbageapps.com/fell-love-js-decorators/
