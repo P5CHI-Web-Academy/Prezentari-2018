@@ -1,0 +1,63 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+html, body
+    font-family: 'Roboto';
+
+
+.menu
+    display: block;
+    background: crimson;
+
+    li
+        margin: 0;
+        padding: 0;
+        list-style-image: none;
+        display: inline-block;
+
+    li a
+        padding: 10px 15px;
+        background: crimson;
+        display: inline-block;
+        color: #fff;
+
+    li:hover a
+        background: coral;
+
+
+.row
+    clear: both;
+    display: block;
+    width: auto;    
+
+    &::after
+        content: " ";
+        clear: both;
+
+
+.block-space
+    padding: 10px 15px;  
+
+
+.block-2
+    width: 20%;
+    float: left;
+    box-sizing: border-box;
+
+
+.block-4
+    width: 40%;
+    float: left;
+    box-sizing: border-box;
+
+.block-6
+    width: 60%;
+    float: left;
+    box-sizing: border-box;
+
+.disabled
+    opacity: 0.6;
+    pointer-events: none;
+
+.hidden
+    display: none;

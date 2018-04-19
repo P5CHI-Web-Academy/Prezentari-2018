@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="block-4">
+    contacts
+  </div>
+  <div class="block-6" >
+    <p *ngFor="let message of messages"><img src="{{message.from.photo}}">{{ message.from.name }} » {{ message.message }}</p>
+    <div class="form" [ngClass]="{ disabled: !currentNickName, hidden: !currentNickName }">{{ currentNickName }}
+      <input type="text" placeholder="type your message..." [(ngModel)]="currentMessage">
+      {{ currentMessage }}
+      <button (click)="messageSubmit()">Submit</button>
+    </div>
+  </div>
+</div>
