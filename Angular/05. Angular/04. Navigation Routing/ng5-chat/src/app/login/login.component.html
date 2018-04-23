@@ -1,0 +1,5 @@
+<div class="form">
+  <div class="message" [ngClass]="{ hidden: !error }">{{ error ? error.message : '' }}</div>
+  <input type="text" [(ngModel)]="username" placeholder="your username...">
+  <button (click)="userAuth()">Submit</button>
+</div>

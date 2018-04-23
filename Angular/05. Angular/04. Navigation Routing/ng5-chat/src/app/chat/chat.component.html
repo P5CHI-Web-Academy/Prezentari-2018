@@ -1,0 +1,17 @@
+<div class="row">
+  <div>
+    <input type="text" [(ngModel)]="chatWith"><button (click)="chatChange()">Chat</button>
+  </div>
+  <hr/>
+  <div class="block-4">
+    <app-chat-contact-item *ngFor="let contact of contacts" [contact]="contact"></app-chat-contact-item>      
+  </div>
+  <div class="block-6">
+    <app-chat-message *ngFor="let message of messages" [message]="message"></app-chat-message>
+    <div class="form" [ngClass]="{ disabled: !currentNickName, hidden: !currentNickName }">{{ currentNickName }}
+      <input type="text" placeholder="type your message..." [(ngModel)]="currentMessage">
+      {{ currentMessage }}
+      <button (click)="messageSubmit()">Submit</button>
+    </div>
+  </div>
+</div>

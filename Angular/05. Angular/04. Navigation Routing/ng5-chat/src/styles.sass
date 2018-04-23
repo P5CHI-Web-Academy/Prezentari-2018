@@ -1,0 +1,93 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('//fonts.googleapis.com/css?family=Roboto')
+
+$header-color: #3c92d3
+$header-color-active: #4caee3
+
+html, body
+    
+    margin: 0
+    padding: 0
+    font-family: 12px/18px 'Open Sans', Roboto,"Lucida Grande","Lucida Sans Unicode",Arial,Helvetica,Verdana,sans-serif
+
+
+
+.hidden
+    display: none !important
+
+.wrapper
+    display: block
+    
+    .container
+        display: block
+        max-width: 960px
+        margin: 0 auto
+
+.menu
+    display: block
+    background: $header-color
+    margin: 0
+    &::before
+        content: "Chat App"
+        font-weight: bold
+        padding: 0 10px
+        color: #fff
+    li
+        margin: 0
+        padding: 0
+        list-style-image: none
+        display: inline-block
+        a
+            padding: 15px 15px
+            display: inline-block
+            color: #fff
+            text-decoration: none
+
+    li:hover a
+        background: $header-color-active
+
+
+.row
+    clear: both
+    display: block
+    width: auto    
+
+    &::after
+        content: " "
+        clear: both
+
+
+.block-space
+    padding: 10px 15px
+
+
+.block-2
+    width: 20%
+    float: left
+    box-sizing: border-box
+
+
+.block-4
+    width: 40%
+    float: left
+    box-sizing: border-box
+
+.block-6
+    width: 60%
+    float: left
+    box-sizing: border-box
+
+.disabled
+    opacity: 0.6
+    pointer-events: none
+
+.hidden
+    display: none
+
+
+img.avatar
+    max-width: 48px
+    max-height: 48px
+
+
+
