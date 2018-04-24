@@ -1,0 +1,22 @@
+<div class="wrapper">
+  <div class="container">
+    <ul class="menu">
+      
+      <li [ngClass]="{ hidden: identified }">
+        <a routerLink='login'>Auth Page</a>
+      </li>
+      <li [ngClass]="{ hidden: !identified }">
+        <a routerLink=''>Home</a>
+      </li>
+      <li [ngClass]="{ hidden: !identified }">
+        <a routerLink='/contacts'>Contacts</a>
+      </li>
+      <li>
+        <a routerLink='/about'>About</a>
+      </li>
+      <li [ngClass]="{ hidden: !identified }">
+        <a (click)="userLogout()">Logout</a>
+      </li>
+    </ul>
+  </div>
+</div>
