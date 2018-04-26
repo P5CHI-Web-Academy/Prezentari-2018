@@ -39,10 +39,10 @@ OnDestroy {
         this.updateSource()
       });
 
-    this.auth.authState().subscribe(params => {
-      if (params.user) {
+    this.auth.authState().subscribe((params) => {
+      if (params['user']) {
         this.me = new Contact(
-          params.user,
+          params['user'],
           "email@sample.com",
           new Date(),
           ""

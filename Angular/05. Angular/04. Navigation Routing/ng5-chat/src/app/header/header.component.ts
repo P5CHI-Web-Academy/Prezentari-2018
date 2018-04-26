@@ -19,7 +19,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
     this.auth.authState().subscribe(params => {
-      if (("user" in params) && params.user === null) {
+      if (("user" in params) && params['user'] === null) {
         this.identified = false;
         this.router.navigate(['login']);
       } else {

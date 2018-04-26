@@ -7,7 +7,7 @@ import { Contact } from '../datatypes/contact.type';
 import { debug } from 'util';
 
 export class ChatService {
-  private url = 'http://192.168.43.126:5000';
+  private url = 'http://127.0.0.1:5000';
   private socket;
   public  messagesSource;
 
