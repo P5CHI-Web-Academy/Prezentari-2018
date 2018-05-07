@@ -1,0 +1,17 @@
+<blockquote class="message">
+  Current Hash mode: <strong>{{ hashType }}</strong>
+</blockquote>
+
+<blockquote>
+  <input type="text" [(ngModel)]="originalStr" placeholder="type your string" />
+
+  <button type="button" (click)="submitHash()">Submit</button>
+</blockquote>
+
+<blockquote class="message" *ngIf="obtainedError">
+  {{ obtainedError.message }}
+</blockquote>
+
+<blockquote>
+  <code><pre>{{ obtainedHash }}</pre></code>
+</blockquote>

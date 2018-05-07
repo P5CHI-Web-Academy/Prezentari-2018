@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+blockquote {
+    max-width: 450px;
+
+    background: #dedede;
+
+    color: #232323;
+
+    font-size: 14px;
+
+    padding: 15px 25px;
+}
+
+blockquote.message {
+    background: #d0d0d0;
+
+    text-align: center;
+}

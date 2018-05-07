@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+.error, .content {
+    border: 1px solid #c0c0c0;
+
+    padding: 10px 15px;
+}
+
+.error {
+    border-color: red;
+    background: rosybrown;
+    color: red;
+}
