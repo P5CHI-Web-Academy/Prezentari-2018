@@ -1,0 +1,12 @@
+.app-product-item {
+    background: #f5f5f5;
+
+    color: #000;
+
+    border: 2px solid #b5b5b5;
+
+    padding: 10px 15px;
+    margin: 15px 0;
+
+    font-size: 12px;
+}

@@ -1,0 +1,6 @@
+<p *ngIf="isLoading">
+  products are loading...
+</p>
+
+
+<product-item *ngFor="let item of products" [product]="item"></product-item>

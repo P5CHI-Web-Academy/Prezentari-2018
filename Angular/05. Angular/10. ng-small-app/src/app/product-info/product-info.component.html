@@ -1,0 +1,10 @@
+<p *ngIf="isLoading">
+  product-info is loading...
+</p>
+
+
+<div *ngIf="product">
+  <h2>{{ product.name }}</h2>
+  <img [src]="productImage()" height="48" align="absmiddle">
+  <i>{{ product.description }}</i>
+</div>
